@@ -1,4 +1,5 @@
 let tileInputs = document.querySelectorAll('.container .cellInput');
+let btnNumbers = document.querySelectorAll('.number .btnNumber');
 
 var rows = 9;
 var cols = 9;
@@ -59,7 +60,7 @@ function display(data) {
         } else {
             tileInput.value = null;
             tileInput.readOnly = false;
-            tileInput.style.backgroundColor = "rgb(82 229 209 / 47%)";
+            tileInput.style.backgroundColor = "rgb(82 229 209 / 70%)";
         }
         //tileInput.setAttribute("readonly");
         inputArray[row][col] = data[row][col];
@@ -67,7 +68,7 @@ function display(data) {
 }
 function getInputData() {
     tileInputs.forEach(function(tileInput, index) {
-        tileInput.addEventListener('input', function(j) {
+        tileInput.addEventListener('input', function() {
             console.log(tileInput.value);
             if(!checkValid(tileInput.value)) {
                 tileInput.value = null;
@@ -90,6 +91,23 @@ function getInputData() {
         })
     })
 }
+function clickKeyboard() {
+    let selectedCell = null;
+    tileInputs.forEach((tileInput, index) => {
+        tileInput.addEventListener("focus", function() {
+            
+            if(btnNumbers != null) {
+                btnNumbers.forEach((btnNumber) => {
+                    btnNumber.addEventListener("click", () => {
+                        tileInput.value = btnNumber.value;
+                        console.log(tileInput);
+                    })
+                })
+            }
+        })
+    })
+}
+
 function checkValid(input) {
     if(input > 0 && input < 10) {
         return true;
@@ -157,6 +175,7 @@ function printResult(result) {
 addInnerBody();
 generateBoard();
 getInputData();
+clickKeyboard()
 sendData();
 
 

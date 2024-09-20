@@ -65,10 +65,10 @@ h1 {
     cursor: pointer;
 }
 .container .cellInput:hover {
-    background-color: #75d7c5;
+    background-color: #2fa58fae !important;
 }
 .container .cellInput:focus {
-    background-color: #75d7c5;
+    background-color: #2fa58fae;
     outline: none;
 }
 
@@ -84,7 +84,7 @@ h1 {
     height: 20vw;
     justify-content: space-around;
 }
-.col2 .number .btn {
+.col2 .number .btnNumber {
     /* margin-left: 10px; */
     width: calc(100% / 3 - 5px);
     height: calc(100% / 3 - 5px);
@@ -93,10 +93,10 @@ h1 {
     border:none;
     border-radius: 3px;
 }
-.col2 .number .btn:hover {
+.col2 .number .btnNumber:hover {
     background-color: #75d7c5;
 }
-.col2 .number .btn:active {
+.col2 .number .btnNumber:active {
     background-color: #75d7c5c7;
 }
 .edit {
@@ -110,7 +110,7 @@ h1 {
 .col2 .edit .submitBtn,
 .col2 .edit .generateBtn,
 .col2 .edit .deleteBtn{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     background-color: #75d7c5; /* Green background */
     color: white;              /* White text */
     border: none;              /* Remove default border */
