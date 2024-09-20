@@ -39,7 +39,6 @@ function generateBoard() {
             .then(data => {
                 console.log('Fetched data:', data);
                 display(data);
-                getInputData(data);
             })
             .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
@@ -52,8 +51,17 @@ function display(data) {
         let row = Math.floor(index / 9);
         let col = index % 9;
         var num = data[row][col];
-
-        tileInput.value = num < 0 ? null : num;
+        
+        if(num > 0) {
+            tileInput.value = num;
+            tileInput.readOnly = true;
+            tileInput.style.backgroundColor = "rgb(82 229 209 / 0%)";
+        } else {
+            tileInput.value = null;
+            tileInput.readOnly = false;
+            tileInput.style.backgroundColor = "rgb(82 229 209 / 47%)";
+        }
+        //tileInput.setAttribute("readonly");
         inputArray[row][col] = data[row][col];
     })
 }

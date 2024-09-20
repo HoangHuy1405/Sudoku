@@ -62,6 +62,10 @@ h1 {
     box-sizing: border-box;
     text-align: center;
     font-size: 26px;
+    cursor: pointer;
+}
+.container .cellInput:hover {
+    background-color: #75d7c5;
 }
 .container .cellInput:focus {
     background-color: #75d7c5;
@@ -123,7 +127,8 @@ h1 {
 .col2 .edit .submitBtn:hover,
 .col2 .edit .generateBtn:hover,
 .col2 .edit .deleteBtn:hover {
-    background-color: #326871; /* Darker green on hover */
+    cursor: pointer;
+    background-color: #2cb49b; /* Darker green on hover */
 }
 
 .col2 .edit .submitBtn:active,
