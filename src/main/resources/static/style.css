@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body {
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    font-family: 'Roboto', sans-serif;
+}
+ol, ul {
+    list-style: none;
+}
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/*  */
+h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+.container {
+    max-width: 540px;
+    max-height: 540px;
+    width: 60vw;
+    height: 60vw;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+/* .container .tile {
+    width: calc(100%/3);
+    height: calc(100%/3);
+    border: 1.5px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+} */
+.container .cellInput{
+    width: calc(100%/9);
+    height: calc(100%/9);
+    border: 1px solid grey;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 26px;
+}
+.container .cellInput:focus {
+    background-color: #75d7c5;
+    outline: none;
+}
+
+
+.col2 {
+    width: 20vw;
+    margin-left: 20px;
+}
+.col2 .number {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20vw;
+    height: 20vw;
+    justify-content: space-around;
+}
+.col2 .number .btn {
+    /* margin-left: 10px; */
+    width: calc(100% / 3 - 5px);
+    height: calc(100% / 3 - 5px);
+    font-size: 30px;
+    background: rgb(218, 218, 218);
+    border:none;
+    border-radius: 3px;
+}
+.col2 .number .btn:hover {
+    background-color: #75d7c5;
+}
+.col2 .number .btn:active {
+    background-color: #75d7c5c7;
+}
+.edit {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.col2 .edit .submitBtn,
+.col2 .edit .generateBtn,
+.col2 .edit .deleteBtn{
+    margin-bottom: 20px;
+    background-color: #75d7c5; /* Green background */
+    color: white;              /* White text */
+    border: none;              /* Remove default border */
+    padding: 15px 24px;        /* Padding around the text */
+    text-align: center;        /* Center text */
+    text-decoration: none;     /* Remove underline */
+    display: inline-block;     /* Display inline for proper alignment */
+    font-size: 16px;           /* Increase font size */
+    border-radius: 5px;        /* Rounded corners */
+    cursor: pointer;           /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+  
+.col2 .edit .submitBtn:hover,
+.col2 .edit .generateBtn:hover,
+.col2 .edit .deleteBtn:hover {
+    background-color: #326871; /* Darker green on hover */
+}
+
+.col2 .edit .submitBtn:active,
+.col2 .edit .deleteBtn:active {
+    background-color: #326871ab; /* Darker green on hover */
+}
